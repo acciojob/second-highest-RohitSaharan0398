@@ -22,18 +22,23 @@
     }
 }
 
-			if(largest==secondHighest)
-				return Infinity;
-			else return secondHighest;
+		if(secondLargest!==-Infinity){
+    //console.log(`Second largest element is ${secondLargest}`);
+			return secondHighest;
+}
+else{
+   // console.log("Second largest element doesn't exist.");
+	return Infinity;
+}
 		}
 
 		function Main() {
-			//var n = prompt("Enter the number of elements");
+			var n = prompt("Enter the number of elements");
 			var arr = [];
 			for (var i = 0; i < n; i++) {
-				//arr[i] = prompt("Enter element " + (i+1));
+				arr[i] = prompt("Enter element " + (i+1));
 			}
-			//alert(secondHighest(arr));
+			alert(secondHighest(arr));
 		}
 		Main();
 	</script>
