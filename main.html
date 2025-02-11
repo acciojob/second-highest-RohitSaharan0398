@@ -8,20 +8,21 @@
 
 <body>	
 	<script>
-		function secondHighest(numbers) {
-			if(numbers.length<2)
+		function secondHighest(arr) {
+			let n=arr.length;
+			if(n<2)
 				return Infinity;
-	let largest = -Infinity, secondLargest = -Infinity;
-    for(let i=0; i<numbers.length;i++){
-    if(numbers[i]>largest){
-        secondLargest = largest;
-        largest = numbers[i];
-    }
-    else if(numbers[i]<largest && numbers[i]>secondLargest){
-        secondLargest = numbers[i];
-    }
+			
+			arr.sort((a, b) => a - b);
+
+			if(arr[0]===arr[1])
+				return Infinity;
+
+			return arr[1];
+			
 }
 
+			
 		if(secondLargest!==-Infinity){
     //console.log(`Second largest element is ${secondLargest}`);
 			return secondHighest;
