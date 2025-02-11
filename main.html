@@ -12,26 +12,22 @@
 			let n=arr.length;
 			if(n<2)
 				return Infinity;
+
+
 			
 			arr.sort((a, b) => a - b);
 
 			if(arr[0]===arr[1])
 				return Infinity;
+			
 
 			return arr[1];
 			
 }
 
 			
-		if(secondLargest!==-Infinity){
-    //console.log(`Second largest element is ${secondLargest}`);
-			return secondHighest;
-}
-else{
-   // console.log("Second largest element doesn't exist.");
-	return Infinity;
-}
-		}
+		
+		
 
 		function Main() {
 			var n = prompt("Enter the number of elements");
