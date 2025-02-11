@@ -10,7 +10,7 @@
 	<script>
 		function secondHighest(arr) {
 			
-			 if (arr.length < 2) return null; // Handle edge case
+			 if (arr.length < 2) return Infinity; // Handle edge case
   let [first, second] = arr.reduce(([first, second], num) => {
     if (num > first) {
       return [num, first];
