@@ -10,26 +10,16 @@
 	<script>
 		function secondHighest(arr) {
 			
-			let n=arr.length;
-			if(n<2){
-				return Infinity;
-			}
-			for(let i=1;i<n;i++){
-                for(let j=0;j<n;j++){
-                if(arr[i]>arr[j]){
-                    let temp=arr[i];
-					arr[j]=arr[i];
-					arr[i]=temp;
-				}
-				
-				}
-			
-			}
-			if(arr[n-1]=arr[n-1]){
-				return Infinity;
-			}
-			else return arr[n-2];
-			
+			 if (arr.length < 2) return null; // Handle edge case
+  let [first, second] = arr.reduce(([first, second], num) => {
+    if (num > first) {
+      return [num, first];
+    } else if (num > second && num < first) {
+      return [first, num];
+    }
+    return [first, second];
+  }, [-Infinity, -Infinity]);
+  return second;
 		}
 
 		function Main() {
